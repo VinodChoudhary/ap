@@ -18,14 +18,14 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
+	{	 
 		$this->load->view('welcome_message');
 	}
 
-	public function loading()
+	/*public function loading()
 	{
 		$this->load->view('Progress.html');
-	}
+	}*/
 
 	public function progpage()
 	{
@@ -34,7 +34,9 @@ class Welcome extends CI_Controller {
 
 		$data['tab']=$q;
 
-		$this->load->view('Progress.html', $data);
+		 		
+
+		$this->load->view('Progress', $data);
 	}
 }
 
