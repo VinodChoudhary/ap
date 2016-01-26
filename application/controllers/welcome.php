@@ -24,6 +24,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->helper('url');
 		$this->load->model('log_model');
+		$this->load->model('progresspull');
 	}
 
 	public function index()
@@ -38,16 +39,17 @@ class Welcome extends CI_Controller {
 	}*/
 
 	public function progpage()
-	{
-		$this->load->model('ProgressPull');
-		$q=$this->ProgressPull->pull();
-
+	{	echo "string";
+		
+		//$q=$this->progresspull->pull();
+		$this->load->model('progresspull');
+		$q = $this->log_model->pull();
 		$data['tab']=$q;
 
 		
-
+		//var_dump(expression)
 		$this->load->view('Progress', $data);
-		$this->load->view('welcome_message');
+		//$this->load->view('welcome_message');
 	}
 	public function red()
 	{
