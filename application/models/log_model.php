@@ -20,9 +20,10 @@ public function register($in){
 	} 
 	}
 public function login($in)
-{		$password = $in['pass'];
+{	
+	$password = $in['pass'];
 	$hash = hash("sha512",$password);
-	echo $password.$in['mob'];
+	//echo $password.$in['mob'];
 	$qry = "SELECT * FROM users WHERE mobile = '$in[mob]'";
 	$i = $this->db->query($qry);
 	$i = $i->result_array();

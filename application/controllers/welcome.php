@@ -42,7 +42,7 @@ class Welcome extends CI_Controller {
 		$in['pass'] = $pass;
 		if(!is_numeric($mobile)==1){
 		$merr = 0;
-		echo $pass.$mobile;
+		//echo $pass.$mobile;
  		 //echo "mob err";
 
 		}
@@ -127,8 +127,13 @@ if(strlen($pass)<8) echo "err";
 
 }
 	public function che(){
-			$this->load->view('login_page');
+			$this->load->view('prog.html');
 	}
+public function logout()
+{
+	setcookie('userdata', "", time() - 3600);
+	$this->load->view('welcome_message');
+}
 }
 
 /* End of file welcome.php */
