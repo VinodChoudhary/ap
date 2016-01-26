@@ -22,6 +22,12 @@
   
 
 </head>
+<body>
+<form action='/ap/index.php/welcome/progpage' method='post'>
+ 	<button type="submit">Click me!</button>
+ 	</form>
+<div id="container">
+	<h1>Welcome to CodeIgniter!</h1>
 <body background="1264.jpg">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
