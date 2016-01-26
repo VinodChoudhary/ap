@@ -19,7 +19,22 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('welcome_message');
+	}
+
+	public function loading()
+	{
 		$this->load->view('Progress.html');
+	}
+
+	public function progpage()
+	{
+		$this->load->model('ProgressPull');
+		$q=$this->ProgressPull->pull();
+
+		$data['tab']=$q;
+
+		$this->load->view('Progress.html', $data);
 	}
 }
 
