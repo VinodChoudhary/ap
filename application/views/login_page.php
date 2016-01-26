@@ -19,12 +19,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="main">
 			<h1>Login Form</h1>
 			<div class="input_form">
-				<form>
-					<input type="text" placeholder="mobile number" onfocus="this.value = '';"  required="">
-					<input type="password"  placeholder="password" onfocus="this.value = '';"  required="">
-				</form>
-			</div>
-			<div class="ckeck-bg">
+				<form action="login" method="post">
+					<input type="text" name="mobile" placeholder="mobile number"   required="">
+					<input type="password" name="password" placeholder="password"   required="">
+			
+<div class="ckeck-bg">
 				<div class="checkbox-form">
 					<div class="check-left">
 						<div class="check">
@@ -32,13 +31,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="check-right">
-						<form>
-							<input type="submit" value="Login">
-						</form>
+		
+						<input type="submit" value="Login">
+		
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 			</div>
+
+				</form>
+			</div>
+			
 		</div>
 </body>
 </html>

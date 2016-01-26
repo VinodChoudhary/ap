@@ -19,16 +19,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="main">
 			<h1>Registration Form</h1>
 			<div class="input_form">
-				<form>
-					<input type="text" placeholder="mobile number" onfocus="this.value = '';"  required="">
+				<form action="register" method="post">
+					<input name="mob" type="text" placeholder="mobile number" onfocus="this.value = '';"  required="">
 					<br>
-					<input type="text" placeholder="Name" onfocus="this.value = '';"  required="">
+					<input name="name" type="text" placeholder="Name" onfocus="this.value = '';"  required="">
 					<br>
-					<input type="text" placeholder="email adress" onfocus="this.value = '';"  required="">
-					<input type="password" id="p1" placeholder="password" onfocus="this.value = '';"  required="">
-					<div class="row"><div><input type="password"  placeholder="password" onkeyup="if(this.value != document.getElementById('p1').value) {document.getElementById('x1').innerHTML = 'passwords do not match'; document.getElementById('x2').innerHTML = '';} else {document.getElementById('x1').innerHTML = ''; document.getElementById('x2').innerHTML = 'passwords match';}"  required=""></div> <div><p id="x1" style="color:RED"></p><p id="x2" style="color:GREEN"></p></div></div>
-				</form>
-			</div>
+					<input name="email" type="text" placeholder="email adress" onfocus="this.value = '';"  required="">
+					<input name="pass" type="password" id="p1" placeholder="password" onfocus="this.value = '';"  required="">
+					<div class="row"><div><input type="password"  placeholder="password" onkeyup="if(this.value != document.getElementById('p1').value) {document.getElementById('x1').innerHTML = 'passwords do not match'; document.getElementById('x2').innerHTML = ''; document.getElementById('s1').disabled = true;} else {document.getElementById('x1').innerHTML = ''; document.getElementById('x2').innerHTML = 'passwords match'; document.getElementById('s1').disabled = false;}"  required=""></div> <div><p id="x1" style="color:RED"></p><p id="x2" style="color:GREEN"></p></div></div>
+					<div class="row"><input type="radio" name="type" value=TRUE checked>Customer &nbsp; <input type="radio" name="type" value=false checked>Vendor </div>
 			<div class="ckeck-bg">
 				<div class="checkbox-form">
 					<div class="check-left">
@@ -37,13 +36,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="check-right">
-						<form>
-							<input type="submit" value="Login">
-						</form>
+						
+							<input type="submit" id="s1" disabled value="Register">
+						
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 			</div>
+				</form>
+			</div>
+			
 		</div>
 </body>
 <!-- if(this.value == p1.value) document.getElementById('x1').innerHTML = 'Doesnt match'; else document.getElementById('x1').innerHTML = 'matched';</html> -->
