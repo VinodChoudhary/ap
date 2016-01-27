@@ -50,8 +50,30 @@
 	</div>'; 
 		echo '<div class="col-sm-3 well well-sm" style="background:rgba(153,134,235,.4); border-radius:5px;padding-left:30px;font-family:"Trebuchet MS", Helvetica, sans-serif; color:white" >'.$tab[$i]['Vend_Name'].'
 	</div>';
-		echo '<div class="col-sm-3 well well-sm " style="background:rgba(153,134,235,.4); border-radius:5px;padding-left:30px;font-family:"Trebuchet MS", Helvetica, sans-serif; color:white">' .$tab[$i]['Status'].' </div>';
+		echo '<div class="col-sm-3 well well-sm " style="background:rgba(153,134,235,.4); border-radius:5px;padding-left:30px;font-family:"Trebuchet MS", Helvetica, sans-serif; color:white"><p id="p'.$i.'" value="'.$tab[$i]['Status'].'" ></p>	
+		<div class="demo-wrapper html5-progress-bar">
+		<div class="progress-bar-wrapper">
+			<progress id="prog'.$i.'" value="0" max="100" ></progress>
+			<span class="progress-value">0%</span>
+		</div>
+	</div>
+ </div>';
 	}
 
 ?>
 
+<script type="text/javascript">
+<?php 
+	for($i=0; $i<sizeof($tab); $i++){
+		echo "var x = 0;";
+		echo "function pb".$i."(){
+    	var req = ".$tab[$i]['Status'].";
+    	x = x + 1;
+    	if(x <= ".$tab[$i]['Status'].") document.getElementById('prog".$i."').value = x;
+    }
+    setInterval(pb".$i.",100);";
+		
+	}
+	
+?>
+</script>
