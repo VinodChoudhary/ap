@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class ProgressPull extends CI_Controller{
+class progresspull extends CI_Controller{
 
 	public function pull()
 	{
