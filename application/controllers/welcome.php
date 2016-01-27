@@ -146,7 +146,7 @@ public function register()
 
 }
 public function che(){
-	$this->load->view('prog.html');
+	$this->load->view('header');
 }
 public function logout()
 {
