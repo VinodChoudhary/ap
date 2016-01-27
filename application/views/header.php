@@ -8,88 +8,80 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<title>Aapka Painter- Best way to get your house painted</title>
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
- 
-  /*<style>
-  .navbar-menu {
-  background-color: #F08080;
-  margin: 2% auto;
-  max-width: 1000px;
-  width: calc(100%);
+  <style>
+  av {
+    height: 40px;
+    width: 100%;
+    background: #455868;
+    font-size: 11pt;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 2px solid #283744;
 }
-
-.navbar-menu .menu {
-  display: block;
-  text-align: center;
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    /*width: 600px;*/
+    height: 40px;
 }
-
-.navbar-menu .menu li {
-  display: inline-block;
+nav li {
+    display: inline;
+    float: left;
 }
-
-.navbar-menu .menu li:hover > .submenu {
-  display: block;
-  -webkit-animation-name: showSubMenu;
-  -webkit-animation-duration: .4s;
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
 }
-
-.navbar-menu .menu li ul {
-  background-color: #f08080;
-  display: none;
-  position: absolute;
+.clearfix:after {
+    clear: both;
 }
-
-.navbar-menu .menu li ul li {
-  display: block;
+.clearfix {
+    *zoom: 1;
 }
-
-.navbar-menu .menu li ul li a:active {
-  -webkit-animation-name: hideSubMenu;
-  -webkit-animation-duration: .4s;
+nav a {
+    color: #fff;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
 }
-  </style>*/
+nav li a {
+    border-right: 1px solid #576979;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+nav li:last-child a {
+    border-right: 0;
+}
+nav a:hover, nav a:active {
+    background-color: #1CA8DD;
+}
+nav a#pull {
+    display: none;
+}   
+  </style>
 </head>
 <body>
-<form action='/ap/index.php/welcome/progpage' method='post'>
- 	<button type="submit">Click me!</button>
- 	</form>
-<div id="container">
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top clearfix" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Home</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Progress</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-right">
-                <l1>
-                  <img src="/ap/thumbnail.jpg" height="50px" width="100px"></img>
-                </li>
-                </ul>
-            </div>
-            
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    
+    <ul class="clearfix">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Progress</a></li>
+        <li><a href="#">Contacts</a></li> 
+        <l1 class="navbar-right">
+          <a href="#">
+        <img src="/ap/thumbnail.jpg" height="50px" width="100px"></a></img>
+        </li> 
+    </ul>
+    <a href="#" id="pull">Menu</a>  
+</div>
+</nav>
 </body>
 </html>

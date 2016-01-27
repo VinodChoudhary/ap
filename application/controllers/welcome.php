@@ -148,7 +148,8 @@ public function register()
 
 }
 public function che(){
-	$this->load->view('header');
+	$this->load->view('header_user');
+
 }
 public function logout()
 {
